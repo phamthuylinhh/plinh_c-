@@ -16,19 +16,8 @@ using namespace std;
 		return "";
 		  		
 }
-int main() 
-{
-	int a;
-	int b;
-	cin>>a>>b;
-		if(a<=b && a>=1 && b<=9)
-	{
-		for( int i = a; i<=b; i++)
-			{cout<<i <<std::endl;}
-		cout<<a<<std::endl;
-		cout<<b<<std::endl;;
+
 	return 0;		
-	}
-};
+	};
 
 
