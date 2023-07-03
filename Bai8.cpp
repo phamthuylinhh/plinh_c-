@@ -1,30 +1,21 @@
-// Viet chuong trinh dem xem trong mang 1 chieu có bao nhieu so duong chan
-#include<iostream>
+//// Viet chuong trinh dem xem trong mang 1 chieu có bao nhieu so duong chan
+#include <iostream>
 using namespace std;
 
-int main ()
+int main()
 {
-	int n = 0 ;
-	cout << "Nhap phan tu cua Mang: " ;
-	cin >> n;
-	
-	int mang[n];
-	cout <<"Nhap so phan tu cua Mang: " <<endl ;
-	for (int i = 1 ; i <= n ; i++)
-	{
-		cout <<"Phan tu thu " <<i <<" :";
-		cin >> mang[i];
-	}
-	
-	int a = 0;
-	for (int i = 0; i < n ; i++)
-	{
-		if (mang[i] > 0 && mang[i] % 2 == 0)
-		{
-			a = ;
-		}
-	}
-	 cout << "=> Co so duong chan la: " << a ;
-	
-	return 0;
-};
+    int n;
+    cout << "Nhap so phan tu cua mang: ";
+    cin >> n;
+    int a[n];
+    int count = 0;
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Nhap phan tu thu " << i + 1 << ": ";
+        cin >> a[i];
+        if (a[i] > 0 && a[i] % 2 == 0)
+            count++;
+    }
+    cout << "So luong so duong chan trong mang la: " << count;
+    return 0;
+}

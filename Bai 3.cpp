@@ -19,7 +19,13 @@ using namespace std;
  	}
  	else 
  	{
- 		cout <<"Yeu cau nhap lai";
+ 		cout <<"Yeu cau nhap lai: ";
+ 		cin >>n;
+ 		for (int i = 1; i<= n ; i++)
+ 		{
+ 			S *= i;
+ 		}
+ 		cout <<"Ket qua: " <<S;
  	}
     return 0;
 };
