@@ -1,31 +1,43 @@
-//. Su dung câu lenh lap tính tong s = 1 + 1/2 + 1/3 + … + 1/n, voi n nguyên
-//duong nhap vào tu bàn phím (có kiem tra viec nhap n, neu n <0 thi yêu cau nhap lai)
+// Viet chuong trinh tim max , min cua mang 2 chieu
 #include<iostream>
 using namespace std;
-int main (){
-	int n;
-	cout <<"Nhap n = ";
+
+int main()
+{
+	int n , m , mang [100][100];
+	cout << "Nhap n : ";
 	cin >> n;
-	float s = 0.0;
+	cout <<"Nhap m : ";
+	cin >> m;
+	cout <<"Nhap mang: " <<endl;
+	for (int i = 0 ; i < n ; i++)
+	{
+		for (int j = 0; j < m ; j++)
+		{
+			cin >> mang[i][j];
+		}
+	}
 	
-	for ( int i = 1 ; i <= n ; i++)
+	int max = mang[0][0];
+	int min = mang[0][0];
+	
+	for (int i = 0; i < n ; i++)
 	{
-		s += (1.0/i);
-	} 
-	if (n > 0 )
-	{
-		cout <<"Ket qua:" << s;
+		for (int j = 0 ; j < m ; j++)
+		{
+			if (mang[i][j] > max)
+			{
+				max = mang[i][j];
+			}
+			if (mang[i][j] < min)
+			{
+				min = mang[i][j];
+			}
+		}
 	}
-	else 
-	{
-		 cout << "Yeu cau nhap lai:  ";
-		 cin >> n;
-		 for ( int i = 1 ; i <= n ; i++)
-		 {
-				s += (1.0/i);
-		 } 
-		 cout <<"Ket qua:" << s;
-	}
+	
+	cout << "Gia tri lon nhat: " << max <<endl;
+	cout << "Gia tri nho nhat: " << min ;
+	
 	return 0;
 };
-		
