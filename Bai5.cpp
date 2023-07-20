@@ -3,46 +3,40 @@
 using namespace std;
 int main()
 {
-	int n , m , a , b , mang[100][100];	
-	int s= 0;
-    cout <<"Nhap ma tran a: "<< endl;
- 	cout << "Nhap n : ";
- 	cin >>n;
-    cout <<"Nhap m :";
+	int n , m , mang1[10][10], mang2[10][10];
+	cout << " n = " ;
+	cin >> n ; 
+	
+	cout << " m = " ;
 	cin >> m ;
-	for ( int i = 0; i < n ; i++)
+	
+	cout <<"Nhap ma tran 1 :" << endl;
+	for(int i = 0; i < n ;i++)
 	{
-		for ( int j = 0; j < m ; j++)
+		for( int j = 0; j < m ; j++)
 		{
-			cin >>mang[i][j];
-			s += mang[i][j];
+			cin >> mang1[i][j];
 		}
 	}
 	
-	cout <<"Nhap ma tran b: "<< endl;
-	cout << "Nhap a: ";
-	cin >> a;
-	cout <<"Nhap b:";
-	cin >> b;
-	int c = 0;
-	for ( int i = 0; i < a ; i++)
-	{
-		for ( int j = 0; j < b ; j++)
-		{
-			cin >> mang[i][j];
-			c += mang[i][j];
-		}
-	}
-	 
-	int sum = 0;
-	for (int i = 0 ; i < n ; i++)
+	cout <<"Nhap ma tran 2 : " << endl ;
+	for (int i = 0; i< n ; i ++)
 	{
 		for ( int j = 0; j < m ; j++)
 		{
-		sum =  s + c ;
+			cin >>mang2[i][j];
 		}
 	}
 	
-	cout <<" Tong mai ma tran a va b la: "<< sum ;
+	cout <<"Tong 2 ma tran la: " << endl;
+	for(int i = 0; i< n ; i++)
+	{
+		for (int j = 0; j < m ; j++)
+		{
+			cout << mang1[i][j]+mang2[i][j] << " ";
+		}
+			cout << endl;
+	}
+	
 	return 0;
-} 
+};
